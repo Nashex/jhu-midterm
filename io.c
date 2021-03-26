@@ -9,6 +9,7 @@ void fatal_error(const char *message) {
   exit(1);
 }
 
+//Write byte 
 void write_byte(FILE *out, char val) {
   if (fwrite(&val, sizeof(char), 1, out) != 1) fatal_error("Failed to write.");
 }
