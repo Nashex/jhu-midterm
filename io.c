@@ -13,6 +13,8 @@ void fatal_error(const char *message) {
 void write_byte(FILE *out, char val) {
   if (fwrite(&val, sizeof(char), 1, out) != 1) fatal_error("Failed to write.");
 }
+
+//Write bytes
 void write_bytes(FILE *out, const char data[], unsigned n) {
   for (int i = 0; i < n; i++) {
     if (fwrite(&data[i], sizeof(char), 1, out) != 1) fatal_error("Failed to write.");
