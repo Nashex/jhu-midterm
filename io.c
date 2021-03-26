@@ -31,7 +31,7 @@ void write_s16(FILE *out, int16_t value) {
 }
 
 void write_s16_buf(FILE *out, const int16_t buf[], unsigned n) {
-  for (int i = 0; i < n; i++) {
+  for (unsigned int i = 0; i < n; i++) {
     write_s16(out, buf[i]);
   }
 }
